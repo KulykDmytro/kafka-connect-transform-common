@@ -57,9 +57,9 @@ public abstract class FieldToJSON<R extends ConnectRecord<R>> extends BaseTransf
   @Override
   public void configure(Map<String, ?> settings) {
     this.config = new FieldToJSONConfig(settings);
-    Map<String, Object> settingsClone = new LinkedHashMap<>(settings);
-    settingsClone.put(FieldToJSONConfig.SCHEMAS_ENABLE_CONFIG, this.config.schemasEnable);
-    this.converter.configure(settingsClone, false);
+    Map<String, Object> converterSettings = new LinkedHashMap<>(settings);
+    converterSettings.put("schemas.enable", false);
+    this.converter.configure(converterSettings, false);
     this.fieldPaths = new ArrayList<>(this.config.fields.size());
     for (String field : this.config.fields) {
       this.fieldPaths.add(field.split("\\."));

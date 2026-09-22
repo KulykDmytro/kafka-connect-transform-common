@@ -263,17 +263,6 @@ Comma-separated list of field paths whose value is converted to a JSON string, u
 *Type:* LIST
 
 
-##### `schemas.enable`
-
-Flag to determine if the JSON data should include the schema.
-
-*Importance:* MEDIUM
-
-*Type:* BOOLEAN
-
-*Default Value:* false
-
-
 
 
 ## [HeaderToField](https://jcustenborder.github.io/kafka-connect-documentation/projects/kafka-connect-transform-common/transformations/HeaderToField.html)
