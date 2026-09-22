@@ -235,6 +235,47 @@ The field to pull the timestamp from. This must be an int64 or a timestamp.
 
 
 
+## [FieldToJSON](https://jcustenborder.github.io/kafka-connect-documentation/projects/kafka-connect-transform-common/transformations/FieldToJSON.html)
+
+*Key*
+```
+com.github.jcustenborder.kafka.connect.transform.common.FieldToJSON$Key
+```
+*Value*
+```
+com.github.jcustenborder.kafka.connect.transform.common.FieldToJSON$Value
+```
+
+This transformation converts one or more fields to their JSON string representation by way of the JsonConverter built into Kafka Connect, leaving the rest of the record intact. Nested fields are addressed using dot notation. It works with both schemaless records and records that carry a schema; for schema based records the target field's type is rewritten to a string.
+
+
+### Configuration
+
+#### General
+
+
+##### `fields`
+
+Comma-separated list of field paths whose value is converted to a JSON string, using dot notation for nested fields (e.g. metadata,parent.child).
+
+*Importance:* HIGH
+
+*Type:* LIST
+
+
+##### `schemas.enable`
+
+Flag to determine if the JSON data should include the schema.
+
+*Importance:* MEDIUM
+
+*Type:* BOOLEAN
+
+*Default Value:* false
+
+
+
+
 ## [HeaderToField](https://jcustenborder.github.io/kafka-connect-documentation/projects/kafka-connect-transform-common/transformations/HeaderToField.html)
 
 *Key*
