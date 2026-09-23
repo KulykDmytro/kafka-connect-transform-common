@@ -38,6 +38,8 @@ public class ServiceLoaderTest {
       "com.github.jcustenborder.kafka.connect.transform.common.Debug",
       "com.github.jcustenborder.kafka.connect.transform.common.ExtractNestedField$Key",
       "com.github.jcustenborder.kafka.connect.transform.common.ExtractNestedField$Value",
+      "com.github.jcustenborder.kafka.connect.transform.common.FieldToJSON$Key",
+      "com.github.jcustenborder.kafka.connect.transform.common.FieldToJSON$Value",
       "com.github.jcustenborder.kafka.connect.transform.common.ExtractTimestamp$Key",
       "com.github.jcustenborder.kafka.connect.transform.common.ExtractTimestamp$Value",
       "com.github.jcustenborder.kafka.connect.transform.common.ExtractXPath$Key",
